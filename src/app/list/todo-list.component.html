@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="container" >
+    
+    <table *ngIf ="taskitem.length ; else notable">
+        <tr>
+            <th><h2>Task</h2></th>
+            <th><h2>Date</h2></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let items of taskitem let i=index">
+            <td>{{items.task}}</td>
+            <td>{{items.date | date: 'MM/dd/YYYY hh:mm:ss a'}}</td>
+            <td><button class="butt" (click)="remove(items.item, i)"><i class="fa-solid fa-trash-can"></i></button></td> 
+            <div class="edit"><a routerLinkActive='active'  [routerLink]="['/edit',items.id]"><i class="fa-sharp fa-regular fa-pen-to-square"></i></a></div>
+            <!-- <td><button class="butt1"(click)="edit(items.task, items.id)" ><i class="fa-sharp fa-regular fa-pen-to-square"></i> Edit</button></td> -->
+            <!-- <td><button class="updatebutt" (click)="update(items.task , items.id)"><i class="fa-solid fa-clipboard-check"></i> Update</button></td> -->
+            
+         </tr>
+        
+    </table>
+    
+    <ng-template #notable>
+        <div class="nodata">
+            <img src="./assets/image/notask.png">
+            <h1>No Task</h1>
+            <h1>Click ADD Button to add Task</h1>
+            <a routerLinkActive='active' routerLink='/add-todo'><i class="fa-solid fa-plus"></i> Add New Task</a>
+        </div>
+    </ng-template>
+
+    <!-- <div class="addtodo" *ngIfElse = "list.length">
+        <h1>There is no To Do</h1>
+
+    </div> -->
+    <!-- <input type="text" [(ngModel)="demoapp"]> -->
+    <!-- <div *ngFor="let f of arr">
+        <h1>f.id</h1>
+        <h1>f.name</h1>
+    </div> -->
+    <!-- <p> *ngIf ="list.length"</p> -->
+</div>
+

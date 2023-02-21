@@ -1,0 +1,23 @@
+<html >
+    <head>
+    <link rel="stylesheet" href="./todo-list-header.component.css">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    </head>
+    
+<div  class="header">
+
+    <h1>{{title}}</h1>
+    <div class="button">
+        
+        <!-- <button class="but1" type="button" ><i class="fa-solid fa-user"></i> My ToDo's</button> -->
+        <div class="but1"><i class="fa-solid fa-user"></i><a routerLinkActive='active' routerLink='/list' > My ToDo</a></div>
+        <div class="but3"><i class="fa-solid fa-plus"></i><a routerLinkActive='active' routerLink='/add-todo'> Add New Task</a></div>
+        
+        <!-- <button class="but2" type="button"><i class="fa-solid fa-plus"></i> Add ToDo</button> -->
+        
+    </div>
+</div>
+</html>

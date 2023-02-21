@@ -1,0 +1,13 @@
+.container input{
+    /* padding: 10owapx 70px; */
+    margin: 10px auto;
+    text-align: left;
+    height: 35px;
+    width: 20%;
+
+}
+.container button{
+    padding: 10px 12px;
+    font-size: 0.9em;
+    margin-left: 4px;
+}

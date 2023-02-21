@@ -1,0 +1,36 @@
+.addd p{
+    color: #04AA6D;
+    margin-top: auto;
+    font-size: large;
+}
+.add-filter{
+    margin-left: 6px;
+    
+}
+input[type=text] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+.add-filter{
+    padding: 12px 20px;
+}
+.add-filter:hover{
+    background-color:#04AA6D;
+    color: aliceblue;
+    border: none;
+    
+}
+input.ng-invalid{
+    border: 2px solid red;
+}
+input.ng-valid{
+    border: 2px solid green;
+}
+.but-refresh{
+    padding: 6px 8px;
+    border-radius: 50%;
+    margin-left: 6px;
+    /* margin-left: 6px; */
+}
